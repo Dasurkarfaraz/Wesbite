@@ -39,9 +39,10 @@
         </button>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md">
-        <ul class="flex flex-col space-y-4 p-4">
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white shadow-md z-50 hidden flex flex-col items-center justify-center">
+        <button id="menu-close" class="absolute top-4 right-6 text-gray-800 text-3xl">&times;</button>
+        <ul class="text-center space-y-6 text-lg">
             <li><a href="about.html" class="hover:text-purple-500 transition block">About Us</a></li>
             <li><a href="services.html" class="hover:text-purple-500 transition block">Testing Services</a></li>
             <li><a href="yourQuery.html" class="hover:text-purple-500 transition block">Your Query</a></li>
@@ -52,11 +53,19 @@
 
 <script>
     // Toggle mobile menu
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    menuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
     });
 </script>
+
 
 <!-- Hero Section -->
 <section id="home" class="relative h-screen flex items-center justify-center bg-gray-100">
