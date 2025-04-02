@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK's Express Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-sans antialiased">
+
+<!-- Header -->
+<header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 lg:px-20 flex items-center justify-between py-4">
+        <div class="logo text-2xl font-bold text-gray-800">
+            <a href="/" class="hover:text-purple-500 transition">DK's Express Solution</a>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="about.html" class="hover:text-purple-500 transition">About Us</a></li>
+                <li><a href="services.html" class="hover:text-purple-500 transition">Testing Services</a></li>
+                <li><a href="yourQuery.html" class="hover:text-purple-500 transition">Your Query</a></li>
+                <li><a href="contact.html" class="hover:text-purple-500 transition">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="flex space-x-4">
+            <a href="https://wa.me/919004160416" target="_blank" class="border border-purple-500 text-purple-500 py-2 px-4 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a>
+            <a href="contact.html" class="bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition">Get Started</a>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Section -->
+<section id="contact" class="min-h-screen py-16 bg-gray-100 flex items-center">
+    <div class="container mx-auto px-6 lg:px-20">
+        <h2 class="text-4xl font-bold text-center mb-20 text-gray-800">Send Us Your Query</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-gray-800 mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-gray-800 mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-medium text-gray-800 mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                    </div>
+                    <button type="submit" class="bg-purple-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-purple-600 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Popup -->
+<div id="successPopup" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-green-600 font-semibold">Form submitted successfully!</p>
+        <button onclick="closePopup()" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-md">OK</button>
+    </div>
+</div>
+
+<script>
+    emailjs.init("faraz dasurkar");
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+
+        emailjs.send("service_k7zf1gi", "template_quhk7ir", {
+            from_name: name,
+            from_email: email,
+            message: message
+        }).then(response => {
+            document.getElementById("successPopup").classList.remove("hidden");
+        }).catch(error => {
+            console.error("Error sending email:", error);
+        });
+
+        document.getElementById("contactForm").reset();
+    });
+
+    function closePopup() {
+        document.getElementById("successPopup").classList.add("hidden");
+    }
+</script>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 lg:px-20 text-center">
+        <p class="text-lg font-medium">&copy; <span id="year"></span> DK's Express Solution. All rights reserved.</p>
+        <div class="mt-4 flex justify-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Dynamically set the current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

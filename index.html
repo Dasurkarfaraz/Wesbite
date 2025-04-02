@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK's Express Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-sans antialiased">
+
+<!-- Header -->
+<header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 lg:px-20 flex items-center justify-between py-4">
+        <div class="logo text-2xl font-bold text-gray-800">
+            <a href="/" class="hover:text-purple-500 transition">DK's Express Solution</a>
+        </div>
+        
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="about.html" class="hover:text-purple-500 transition">About Us</a></li>
+                <li><a href="services.html" class="hover:text-purple-500 transition">Testing Services</a></li>
+                <li><a href="yourQuery.html" class="hover:text-purple-500 transition">Your Query</a></li>
+                <li><a href="contact.html" class="hover:text-purple-500 transition">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="flex space-x-4">
+            <a href="https://wa.me/919004160416" target="_blank"  class="border border-purple-500 text-purple-500 py-2 px-4 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a>
+            <a href="contact.html" class="bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition">Get Started</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="relative h-screen flex items-center justify-center bg-gray-100">
+    <div class="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full opacity-50 z-0">
+            <source src="assets/videos/animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="relative z-10">
+            <h1 class="text-5xl font-bold mb-6">
+                <span class="text-purple-500">Quality</span> Software Through <em>Expert</em> Testing
+            </h1>
+            <p class="text-lg text-gray-600 mb-6">
+                DK's Express Solution delivers comprehensive software testing services, ensuring your digital products meet the highest standards. Partner with us for superior software quality.
+            </p>
+            <div class="flex space-x-4">
+                <a href="#services" class="bg-purple-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-purple-600 transition">Our Services</a>
+                <a href="https://wa.me/919004160416" target="_blank" class="border border-purple-500 text-purple-500 py-3 px-6 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a></div>
+        </div>
+        <div class="relative z-10"> 
+            <img src="assets/images/tenweb_media_rneuiortw.webp" alt="Team Discussion" class="rounded-lg shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+            <h2 class="text-4xl font-bold mb-6">Discover Our Journey and Values</h2>
+            <p class="text-lg text-gray-600 mb-4">
+                Founded in 2015, DK's Express Solution has dedicated itself to providing exceptional software testing services. Our mission is to ensure that every digital product we test meets the highest standards of quality and reliability.
+            </p>
+            <p class="text-lg text-gray-600">
+                Our expert team, led by industry veterans, is committed to enhancing software quality and performance. We believe in working closely with our clients to achieve the best results.
+            </p>
+        </div>
+        <div>
+            <img src="assets/images/team-photo.webp" alt="Team Photo" class="rounded-lg shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-6 lg:px-20 text-center">
+        <h2 class="text-4xl font-bold mb-10">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4">Automated Testing</h3>
+                <p class="text-gray-600">Leverage our automated tools to ensure consistent performance across all platforms.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4">Security Testing</h3>
+                <p class="text-gray-600">Protect your software from potential vulnerabilities with industry-standard testing.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4">Performance Testing</h3>
+                <p class="text-gray-600">Ensure your software handles peak loads with ease and delivers a seamless experience.</p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-4">Cross-Platform Testing</h3>
+                <p class="text-gray-600">Guarantee compatibility across devices and platforms for a smooth user experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Methodologies Section -->
+<section id="methodologies" class="py-16 bg-white">
+    <div class="container mx-auto px-6 lg:px-20">
+        <h2 class="text-4xl font-bold mb-6">Our Methodologies</h2>
+        <p class="text-lg text-gray-600 mb-8">
+            At DK's Express Solution, we employ a rigorous and client-focused approach to software testing. Our methodologies are designed to ensure comprehensive coverage, early detection of defects, and alignment with your business goals. We adapt our strategies to fit the unique needs of each project, ensuring optimal results.
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <ul class="list-disc list-inside text-lg text-gray-600 space-y-2">
+                <li>Agile Testing</li>
+                <li>Test Automation</li>
+                <li>Performance Testing</li>
+                <li>Security Testing</li>
+                <li>Regression Testing</li>
+                <li>Exploratory Testing</li>
+            </ul>
+            <div>
+                <img src="assets/images/methodology.png" alt="Methodology" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section id="testimonial" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 lg:px-20">
+        <h2 class="text-4xl font-bold text-center mb-10">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+                <img src="assets/images/testimonial.jpg" alt="Client Testimonial" class="rounded-lg shadow-lg">
+            </div>
+            <div>
+                <p class="text-lg text-gray-600 italic mb-4">
+                    "DK's Express Solution's software testing services have significantly improved our product's performance. Their attention to detail and expertise in identifying bugs is unmatched. I highly recommend them for any software testing needs."
+                </p>
+                <p class="text-lg font-bold text-gray-800">Emily Johnson</p>
+                <p class="text-gray-600">Product Manager, Tech Innovations Inc.</p>
+                <div class="mt-4">
+                    <span class="text-yellow-500 text-xl">★★★★★</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 lg:px-20">
+        <h2 class="text-4xl font-bold text-center mb-10 text-gray-800">Contact Us</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Email Section -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+                    <i class="fas fa-envelope text-purple-500 mr-2"></i>Email Us
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                    For questions, email us at 
+                    <a href="mailto:contact@dkexpress.com" class="text-purple-500 hover:underline font-medium">
+                        contact@dkexpress.com
+                    </a>.
+                </p>
+            </div>
+            <!-- Call Section -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+                    <i class="fas fa-phone-alt text-purple-500 mr-2"></i>Call Us
+                </h3>
+                <p class="text-gray-600 leading-relaxed">
+                    You can reach us at 
+                    <a href="tel:+1234567890" class="text-purple-500 hover:underline font-medium">
+                        +1 234 567 890
+                    </a> 
+                    for immediate assistance.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 lg:px-20 text-center">
+        <p class="text-lg font-medium">&copy; <span id="year"></span> DK's Express Solution. All rights reserved.</p>
+        <div class="mt-4 flex justify-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Dynamically set the current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
