@@ -14,10 +14,9 @@
 <header class="bg-white shadow-md fixed w-full z-50">
     <div class="container mx-auto px-6 lg:px-20 flex items-center justify-between py-4">
         <div class="logo text-2xl font-bold text-gray-800">
-            <a href="/" class="hover:text-purple-500 transition">DK's Express Solution</a>
+            <a href="index.html" class="hover:text-purple-500 transition">DK's Express Solution</a>
         </div>
-        
-        <nav>
+        <nav class="hidden lg:flex">
             <ul class="flex space-x-6">
                 <li><a href="about.html" class="hover:text-purple-500 transition">About Us</a></li>
                 <li><a href="services.html" class="hover:text-purple-500 transition">Testing Services</a></li>
@@ -26,11 +25,30 @@
             </ul>
         </nav>
         <div class="flex space-x-4">
-            <a href="https://wa.me/919004160416" target="_blank"  class="border border-purple-500 text-purple-500 py-2 px-4 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a>
+            <a href="https://wa.me/919004160416" target="_blank" class="border border-purple-500 text-purple-500 py-2 px-4 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a>
             <a href="contact.html" class="bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition">Get Started</a>
         </div>
+        <!-- Hamburger Menu -->
+        <button id="menu-toggle" class="lg:hidden text-gray-800">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-md">
+        <ul class="flex flex-col space-y-4 p-4">
+            <li><a href="about.html" class="hover:text-purple-500 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-purple-500 transition">Testing Services</a></li>
+            <li><a href="yourQuery.html" class="hover:text-purple-500 transition">Your Query</a></li>
+            <li><a href="contact.html" class="hover:text-purple-500 transition">Contact Us</a></li>
+        </ul>
     </div>
 </header>
+<script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 <!-- Hero Section -->
 <section id="home" class="relative h-screen flex items-center justify-center bg-gray-100">
@@ -39,19 +57,20 @@
             <source src="assets/videos/animation.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="relative z-10">
-            <h1 class="text-5xl font-bold mb-6">
+        <div class="relative z-10 text-center lg:text-left">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
                 <span class="text-purple-500">Quality</span> Software Through <em>Expert</em> Testing
             </h1>
-            <p class="text-lg text-gray-600 mb-6">
+            <p class="text-base md:text-lg text-gray-600 mb-6">
                 DK's Express Solution delivers comprehensive software testing services, ensuring your digital products meet the highest standards. Partner with us for superior software quality.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
                 <a href="#services" class="bg-purple-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-purple-600 transition">Our Services</a>
-                <a href="https://wa.me/919004160416" target="_blank" class="border border-purple-500 text-purple-500 py-3 px-6 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a></div>
+                <a href="https://wa.me/919004160416" target="_blank" class="border border-purple-500 text-purple-500 py-3 px-6 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a>
+            </div>
         </div>
-        <div class="relative z-10"> 
-            <img src="assets/images/tenweb_media_rneuiortw.webp" alt="Team Discussion" class="rounded-lg shadow-lg">
+        <div class="relative z-10">
+            <img src="assets/images/tenweb_media_rneuiortw.webp" alt="Team Discussion" class="rounded-lg shadow-lg w-full h-auto">
         </div>
     </div>
 </section>
@@ -77,22 +96,22 @@
 <!-- Services Section -->
 <section id="services" class="py-16 bg-white">
     <div class="container mx-auto px-6 lg:px-20 text-center">
-        <h2 class="text-4xl font-bold mb-10">Our Services</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                <h3 class="text-2xl font-semibold mb-4">Automated Testing</h3>
+                <h3 class="text-xl font-semibold mb-4">Automated Testing</h3>
                 <p class="text-gray-600">Leverage our automated tools to ensure consistent performance across all platforms.</p>
             </div>
             <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                <h3 class="text-2xl font-semibold mb-4">Security Testing</h3>
+                <h3 class="text-xl font-semibold mb-4">Security Testing</h3>
                 <p class="text-gray-600">Protect your software from potential vulnerabilities with industry-standard testing.</p>
             </div>
             <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                <h3 class="text-2xl font-semibold mb-4">Performance Testing</h3>
+                <h3 class="text-xl font-semibold mb-4">Performance Testing</h3>
                 <p class="text-gray-600">Ensure your software handles peak loads with ease and delivers a seamless experience.</p>
             </div>
             <div class="p-6 bg-gray-100 rounded-lg shadow-md">
-                <h3 class="text-2xl font-semibold mb-4">Cross-Platform Testing</h3>
+                <h3 class="text-xl font-semibold mb-4">Cross-Platform Testing</h3>
                 <p class="text-gray-600">Guarantee compatibility across devices and platforms for a smooth user experience.</p>
             </div>
         </div>
