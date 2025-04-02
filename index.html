@@ -9,13 +9,15 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-sans antialiased">
-
 <!-- Header -->
 <header class="bg-white shadow-md fixed w-full z-50">
     <div class="container mx-auto px-6 lg:px-20 flex items-center justify-between py-4">
+        <!-- Logo -->
         <div class="logo text-2xl font-bold text-gray-800">
             <a href="index.html" class="hover:text-purple-500 transition">DK's Express Solution</a>
         </div>
+
+        <!-- Desktop Navigation -->
         <nav class="hidden lg:flex">
             <ul class="flex space-x-6">
                 <li><a href="about.html" class="hover:text-purple-500 transition">About Us</a></li>
@@ -24,24 +26,30 @@
                 <li><a href="contact.html" class="hover:text-purple-500 transition">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="flex space-x-4">
+
+        <!-- Call-to-Action Buttons (Desktop Only) -->
+        <div class="hidden lg:flex space-x-4">
             <a href="https://wa.me/919004160416" target="_blank" class="border border-purple-500 text-purple-500 py-2 px-4 rounded-lg hover:bg-purple-500 hover:text-white transition">Learn More</a>
             <a href="contact.html" class="bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition">Get Started</a>
         </div>
-        <!-- Hamburger Menu -->
-        <button id="menu-toggle" class="lg:hidden text-gray-800">
+
+        <!-- Hamburger Menu for Mobile -->
+        <button id="menu-toggle" class="lg:hidden text-gray-800 focus:outline-none">
             <i class="fas fa-bars text-2xl"></i>
         </button>
     </div>
-    <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-md">
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md">
         <ul class="flex flex-col space-y-4 p-4">
-            <li><a href="about.html" class="hover:text-purple-500 transition">About Us</a></li>
-            <li><a href="services.html" class="hover:text-purple-500 transition">Testing Services</a></li>
-            <li><a href="yourQuery.html" class="hover:text-purple-500 transition">Your Query</a></li>
-            <li><a href="contact.html" class="hover:text-purple-500 transition">Contact Us</a></li>
+            <li><a href="about.html" class="hover:text-purple-500 transition block">About Us</a></li>
+            <li><a href="services.html" class="hover:text-purple-500 transition block">Testing Services</a></li>
+            <li><a href="yourQuery.html" class="hover:text-purple-500 transition block">Your Query</a></li>
+            <li><a href="contact.html" class="hover:text-purple-500 transition block">Contact Us</a></li>
         </ul>
     </div>
 </header>
+
 <script>
     // Toggle mobile menu
     document.getElementById('menu-toggle').addEventListener('click', () => {
